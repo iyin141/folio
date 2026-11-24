@@ -1,0 +1,26 @@
+name: ci
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - run: uv venv .venv
+      - run: UV_HTTP_RETRIES=10 uv pip install --python .venv -e . pytest==8.3.5 ruff==0.11.8 sqlalchemy==2.0.40 alembic==1.15.2 "psycopg[binary]==3.2.6" celery==5.5.2 redis==5.2.1 prometheus-client==0.21.1
+      - run: .venv/bin/ruff check .
+      - run: .venv/bin/python -m pytest
+
+  image-arm64:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: docker/setup-qemu-action@v3
+      - uses: docker/setup-buildx-action@v3
+      - name: build api and worker for arm64 (no push)
+        run: |
+          docker buildx build --platform linux/arm64 --target api -t folio-api:ci .
+          docker buildx build --platform linux/arm64 --target worker -t folio-worker:ci .
