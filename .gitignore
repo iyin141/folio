@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+data/
+wheelhouse/
+node_modules/
+.next/
+wt/
+*.egg-info/
+.ruff_cache/
