@@ -9,3 +9,5 @@ node_modules/
 wt/
 *.egg-info/
 .ruff_cache/
+snapshots/
+backups/
