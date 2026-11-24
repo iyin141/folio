@@ -1,0 +1,239 @@
+{
+ "id": "sample-fake-oracle-narrativeqa-4k",
+ "method": "fake-oracle",
+ "dataset": "narrativeqa",
+ "budget": "4k",
+ "created_at": "2026-11-24T19:16:31+00:00",
+ "seed": 0,
+ "limit": null,
+ "reader": "fake",
+ "n_questions": 6,
+ "n_reader": 6,
+ "config": {
+  "name": "fake-oracle",
+  "sparse": true,
+  "dense": true,
+  "fusion": "rrf",
+  "rerank": false,
+  "two_stage": false,
+  "route_top_b": 3,
+  "dos_order": false,
+  "raptor": false,
+  "oracle_book": false,
+  "budget": "4k",
+  "top_k": 10
+ },
+ "metrics": {
+  "route@1": {
+   "mean": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 4
+  },
+  "route@5": {
+   "mean": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 4
+  },
+  "recall_proxy@10": {
+   "mean": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 6
+  },
+  "f1": {
+   "mean": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 6
+  },
+  "rouge_l": {
+   "mean": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 6
+  },
+  "meteor": {
+   "mean": 0.9843231191286038,
+   "lo": 0.964891975308642,
+   "hi": 0.9973402968991829,
+   "n": 6
+  },
+  "accuracy": {
+   "mean": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 6
+  },
+  "latency_ms": {
+   "p50": 5.5707500003045425,
+   "p95": 7.224174997129012,
+   "n": 6
+  },
+  "per_1k": {
+   "tokens_in": 100000.0,
+   "tokens_out": 10000.0,
+   "cost_usd_equiv": 1.0,
+   "n": 6
+  }
+ },
+ "results": [
+  {
+   "qid": "nqa-00255770-8d75ff6903",
+   "question": "Where does this radio station take place?",
+   "gold_gutenberg_id": null,
+   "routing_eligible": false,
+   "routed_gids": [
+    null
+   ],
+   "route_at1": null,
+   "route_at5": null,
+   "recall": true,
+   "answer": "It takes place in Mark's parents basement. ",
+   "choice": null,
+   "f1": 1.0,
+   "rouge_l": 1.0,
+   "meteor": 0.9985422740524781,
+   "correct": true,
+   "latency_ms": 7.280399995972402,
+   "tokens_in": 100,
+   "tokens_out": 10,
+   "cost_usd_equiv": 0.001,
+   "evidence_ids": [
+    "E1"
+   ],
+   "label": null
+  },
+  {
+   "qid": "nqa-00255770-ef3b323712",
+   "question": "Who is Mark Hunter?",
+   "gold_gutenberg_id": null,
+   "routing_eligible": false,
+   "routed_gids": [
+    null
+   ],
+   "route_at1": null,
+   "route_at5": null,
+   "recall": true,
+   "answer": "He is a high school student in Phoenix.",
+   "choice": null,
+   "f1": 1.0,
+   "rouge_l": 1.0,
+   "meteor": 0.9985422740524781,
+   "correct": true,
+   "latency_ms": 5.079500001447741,
+   "tokens_in": 100,
+   "tokens_out": 10,
+   "cost_usd_equiv": 0.001,
+   "evidence_ids": [
+    "E1"
+   ],
+   "label": null
+  },
+  {
+   "qid": "nqa-ae029461-0be0567086",
+   "question": "Where does Anne plan on attending college?",
+   "gold_gutenberg_id": 47,
+   "routing_eligible": true,
+   "routed_gids": [
+    47
+   ],
+   "route_at1": true,
+   "route_at5": true,
+   "recall": true,
+   "answer": "Redmond College",
+   "choice": null,
+   "f1": 1.0,
+   "rouge_l": 1.0,
+   "meteor": 0.9375,
+   "correct": true,
+   "latency_ms": 1.0706999999238178,
+   "tokens_in": 100,
+   "tokens_out": 10,
+   "cost_usd_equiv": 0.001,
+   "evidence_ids": [
+    "E1"
+   ],
+   "label": null
+  },
+  {
+   "qid": "nqa-ae029461-17106238cd",
+   "question": "Why does Anne sell her neighbors cow?",
+   "gold_gutenberg_id": 47,
+   "routing_eligible": true,
+   "routed_gids": [
+    47
+   ],
+   "route_at1": true,
+   "route_at5": true,
+   "recall": true,
+   "answer": "Anne believed it was her cow.",
+   "choice": null,
+   "f1": 1.0,
+   "rouge_l": 1.0,
+   "meteor": 0.9976851851851852,
+   "correct": true,
+   "latency_ms": 2.065500003984198,
+   "tokens_in": 100,
+   "tokens_out": 10,
+   "cost_usd_equiv": 0.001,
+   "evidence_ids": [
+    "E1"
+   ],
+   "label": null
+  },
+  {
+   "qid": "nqa-f4c9b2e0-93a15b8afc",
+   "question": "Who gives refuge to Christopher after a failed assassination attempt? ",
+   "gold_gutenberg_id": 234,
+   "routing_eligible": true,
+   "routed_gids": [
+    234
+   ],
+   "route_at1": true,
+   "route_at5": true,
+   "recall": true,
+   "answer": "Jack of The Tofts",
+   "choice": null,
+   "f1": 1.0,
+   "rouge_l": 1.0,
+   "meteor": 0.9814814814814815,
+   "correct": true,
+   "latency_ms": 6.061999999161344,
+   "tokens_in": 100,
+   "tokens_out": 10,
+   "cost_usd_equiv": 0.001,
+   "evidence_ids": [
+    "E1"
+   ],
+   "label": null
+  },
+  {
+   "qid": "nqa-f4c9b2e0-a14e13b671",
+   "question": "Who tries to assassinate Christopher? ",
+   "gold_gutenberg_id": 234,
+   "routing_eligible": true,
+   "routed_gids": [
+    234
+   ],
+   "route_at1": true,
+   "route_at5": true,
+   "recall": true,
+   "answer": "Servant of Earl Rolf",
+   "choice": null,
+   "f1": 1.0,
+   "rouge_l": 1.0,
+   "meteor": 0.9921875,
+   "correct": true,
+   "latency_ms": 7.05550000059884,
+   "tokens_in": 100,
+   "tokens_out": 10,
+   "cost_usd_equiv": 0.001,
+   "evidence_ids": [
+    "E1"
+   ],
+   "label": null
+  }
+ ]
+}
