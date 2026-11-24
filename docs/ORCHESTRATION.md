@@ -79,6 +79,9 @@ module import time of anything the API process loads.
   - `Reader.answer(question, evidence, options=None) -> Answer`
   - Evidence ids are `E1..En`, assigned **by a counter in prompt order**. (F1 had
     a bug where every hit got `E1`; test with fakes returning several hits.)
+- **`Book.id` = the Gutenberg id** (every library book comes from Gutenberg). So
+  gold Gutenberg ids from NarrativeQA/QuALITY map to `Book.id` by identity; no
+  lookup table.
 - `folio/api/app.py` includes every router: `health` (no prefix), `books`
   (prefix `/books`), `search`, `ask`, `eval` (prefix `/eval`), `galaxy`. Fill your
   own router module only.
