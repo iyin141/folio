@@ -47,3 +47,6 @@ prometheus-client==0.21.1
 ```
 (`ruff==0.11.8` and `pytest==8.3.5` are already in the dev group.) CI installs these explicitly until then.
 Also: `.gitignore` should include `snapshots/`, `backups/`, `wheelhouse/` (already), `.env` (already); add `snapshots/` and `backups/`.
+
+## Docker build
+api target built locally (amd64, Docker Desktop running) with `--build-arg EXTRA_PIP="<NEEDS pins>"`: 341 MB, `import folio.worker, folio.db, celery, sqlalchemy` OK inside. Local tag `folio-api:infra-test` left in Docker (no containers started, no compose project run). Worker target not built (DEFERRED-VM).
