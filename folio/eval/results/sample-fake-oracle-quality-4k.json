@@ -1,0 +1,395 @@
+{
+ "id": "sample-fake-oracle-quality-4k",
+ "method": "fake-oracle",
+ "dataset": "quality",
+ "budget": "4k",
+ "created_at": "2026-11-24T19:16:34+00:00",
+ "seed": 0,
+ "limit": null,
+ "reader": "fake",
+ "n_questions": 12,
+ "n_reader": 12,
+ "config": {
+  "name": "fake-oracle",
+  "sparse": true,
+  "dense": true,
+  "fusion": "rrf",
+  "rerank": false,
+  "two_stage": false,
+  "route_top_b": 3,
+  "dos_order": false,
+  "raptor": false,
+  "oracle_book": false,
+  "budget": "4k",
+  "top_k": 10
+ },
+ "metrics": {
+  "route@1": {
+   "mean": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 9
+  },
+  "route@5": {
+   "mean": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 9
+  },
+  "recall_proxy@10": {
+   "mean": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 12
+  },
+  "f1": {
+   "mean": null,
+   "lo": null,
+   "hi": null,
+   "n": 0
+  },
+  "rouge_l": {
+   "mean": null,
+   "lo": null,
+   "hi": null,
+   "n": 0
+  },
+  "meteor": {
+   "mean": null,
+   "lo": null,
+   "hi": null,
+   "n": 0
+  },
+  "accuracy": {
+   "mean": 1.0,
+   "lo": 1.0,
+   "hi": 1.0,
+   "n": 12
+  },
+  "latency_ms": {
+   "p50": 4.089899998885812,
+   "p95": 5.158719999308232,
+   "n": 12
+  },
+  "per_1k": {
+   "tokens_in": 100000.0,
+   "tokens_out": 10000.0,
+   "cost_usd_equiv": 1.0,
+   "n": 12
+  }
+ },
+ "results": [
+  {
+   "qid": "quality-20007_RZDMZJYW_1",
+   "question": "Why did people say the story about Clinton hiding under a blanket to meet a woman was untrue?",
+   "gold_gutenberg_id": null,
+   "routing_eligible": false,
+   "routed_gids": [
+    null
+   ],
+   "route_at1": null,
+   "route_at5": null,
+   "recall": true,
+   "answer": "He could not have gotten back home without being found out",
+   "choice": 2,
+   "f1": null,
+   "rouge_l": null,
+   "meteor": null,
+   "correct": true,
+   "latency_ms": 4.4086999979335815,
+   "tokens_in": 100,
+   "tokens_out": 10,
+   "cost_usd_equiv": 0.001,
+   "evidence_ids": [
+    "E1"
+   ],
+   "label": null
+  },
+  {
+   "qid": "quality-20007_RZDMZJYW_2",
+   "question": "What made it easier for previous presidents to get away with adultery?",
+   "gold_gutenberg_id": null,
+   "routing_eligible": false,
+   "routed_gids": [
+    null
+   ],
+   "route_at1": null,
+   "route_at5": null,
+   "recall": true,
+   "answer": "The secret service budget was small",
+   "choice": 2,
+   "f1": null,
+   "rouge_l": null,
+   "meteor": null,
+   "correct": true,
+   "latency_ms": 4.041899995470885,
+   "tokens_in": 100,
+   "tokens_out": 10,
+   "cost_usd_equiv": 0.001,
+   "evidence_ids": [
+    "E1"
+   ],
+   "label": null
+  },
+  {
+   "qid": "quality-20007_RZDMZJYW_3",
+   "question": "Why did the press not report on JFK's adultery?",
+   "gold_gutenberg_id": null,
+   "routing_eligible": false,
+   "routed_gids": [
+    null
+   ],
+   "route_at1": null,
+   "route_at5": null,
+   "recall": true,
+   "answer": "They suspected it but did not want to print this kind of story",
+   "choice": 0,
+   "f1": null,
+   "rouge_l": null,
+   "meteor": null,
+   "correct": true,
+   "latency_ms": 2.393499998608604,
+   "tokens_in": 100,
+   "tokens_out": 10,
+   "cost_usd_equiv": 0.001,
+   "evidence_ids": [
+    "E1"
+   ],
+   "label": null
+  },
+  {
+   "qid": "quality-30029_F5N22U40_1",
+   "question": "Why did the Tr'en leave Korvin's door unlocked and a weapon nearby?",
+   "gold_gutenberg_id": 30029,
+   "routing_eligible": true,
+   "routed_gids": [
+    30029
+   ],
+   "route_at1": true,
+   "route_at5": true,
+   "recall": true,
+   "answer": "Their subconscious knew that Korvin was an insoluble problem. This same subconscious led them to provide resources for his escape so they wouldn't have to deal with him anymore. ",
+   "choice": 1,
+   "f1": null,
+   "rouge_l": null,
+   "meteor": null,
+   "correct": true,
+   "latency_ms": 5.177199995960109,
+   "tokens_in": 100,
+   "tokens_out": 10,
+   "cost_usd_equiv": 0.001,
+   "evidence_ids": [
+    "E1"
+   ],
+   "label": null
+  },
+  {
+   "qid": "quality-30029_F5N22U40_2",
+   "question": "Why does the text mean when it says that Korvin was \"unconscious\" at the time of his lessons in the local language?",
+   "gold_gutenberg_id": 30029,
+   "routing_eligible": true,
+   "routed_gids": [
+    30029
+   ],
+   "route_at1": true,
+   "route_at5": true,
+   "recall": true,
+   "answer": "It means that the Tr'en put Korvin under drug hypnosis while they taught him their language. ",
+   "choice": 0,
+   "f1": null,
+   "rouge_l": null,
+   "meteor": null,
+   "correct": true,
+   "latency_ms": 2.132099994516466,
+   "tokens_in": 100,
+   "tokens_out": 10,
+   "cost_usd_equiv": 0.001,
+   "evidence_ids": [
+    "E1"
+   ],
+   "label": null
+  },
+  {
+   "qid": "quality-30029_F5N22U40_3",
+   "question": "How was Korvin able to avoid disclosing the true intent of his mission under the lie detector questioning? ",
+   "gold_gutenberg_id": 30029,
+   "routing_eligible": true,
+   "routed_gids": [
+    30029
+   ],
+   "route_at1": true,
+   "route_at5": true,
+   "recall": true,
+   "answer": "Korvin said truths that literally answered the Tr'en's questions but evaded the intent behind their questions. .",
+   "choice": 1,
+   "f1": null,
+   "rouge_l": null,
+   "meteor": null,
+   "correct": true,
+   "latency_ms": 5.125799997476861,
+   "tokens_in": 100,
+   "tokens_out": 10,
+   "cost_usd_equiv": 0.001,
+   "evidence_ids": [
+    "E1"
+   ],
+   "label": null
+  },
+  {
+   "qid": "quality-52845_75VB1ISR_1",
+   "question": "How much time has passed between Blake's night with Eldoria and his search for Sabrina York in his mind-world?",
+   "gold_gutenberg_id": 52845,
+   "routing_eligible": true,
+   "routed_gids": [
+    52845
+   ],
+   "route_at1": true,
+   "route_at5": true,
+   "recall": true,
+   "answer": "10 hours",
+   "choice": 1,
+   "f1": null,
+   "rouge_l": null,
+   "meteor": null,
+   "correct": true,
+   "latency_ms": 2.0902000028872862,
+   "tokens_in": 100,
+   "tokens_out": 10,
+   "cost_usd_equiv": 0.001,
+   "evidence_ids": [
+    "E1"
+   ],
+   "label": null
+  },
+  {
+   "qid": "quality-52845_75VB1ISR_2",
+   "question": "Why does Deirdre get so upset when Blake Past suggests she go to prom with the young man?",
+   "gold_gutenberg_id": 52845,
+   "routing_eligible": true,
+   "routed_gids": [
+    52845
+   ],
+   "route_at1": true,
+   "route_at5": true,
+   "recall": true,
+   "answer": "Because Deirdre has fallen in love with Blake, despite his age, and wants him to take her to the prom.  ",
+   "choice": 1,
+   "f1": null,
+   "rouge_l": null,
+   "meteor": null,
+   "correct": true,
+   "latency_ms": 5.143600002047606,
+   "tokens_in": 100,
+   "tokens_out": 10,
+   "cost_usd_equiv": 0.001,
+   "evidence_ids": [
+    "E1"
+   ],
+   "label": null
+  },
+  {
+   "qid": "quality-52845_75VB1ISR_3",
+   "question": "Why does shame flame in Blake's cheeks when Deirdre goes to prepare Eldoria's dias?",
+   "gold_gutenberg_id": 52845,
+   "routing_eligible": true,
+   "routed_gids": [
+    52845
+   ],
+   "route_at1": true,
+   "route_at5": true,
+   "recall": true,
+   "answer": "He feels guilty about sleeping with Eldoria when there's a child in the hut, Deirdre, who knows exactly what's going on. ",
+   "choice": 2,
+   "f1": null,
+   "rouge_l": null,
+   "meteor": null,
+   "correct": true,
+   "latency_ms": 2.1205000007757917,
+   "tokens_in": 100,
+   "tokens_out": 10,
+   "cost_usd_equiv": 0.001,
+   "evidence_ids": [
+    "E1"
+   ],
+   "label": null
+  },
+  {
+   "qid": "quality-62139_J05FWZR6_1",
+   "question": "What is the most likely meaning of the slang O.Q.? (in twentieth-century American English)",
+   "gold_gutenberg_id": 62139,
+   "routing_eligible": true,
+   "routed_gids": [
+    62139
+   ],
+   "route_at1": true,
+   "route_at5": true,
+   "recall": true,
+   "answer": "O.K./OK",
+   "choice": 3,
+   "f1": null,
+   "rouge_l": null,
+   "meteor": null,
+   "correct": true,
+   "latency_ms": 4.137900002300739,
+   "tokens_in": 100,
+   "tokens_out": 10,
+   "cost_usd_equiv": 0.001,
+   "evidence_ids": [
+    "E1"
+   ],
+   "label": null
+  },
+  {
+   "qid": "quality-62139_J05FWZR6_2",
+   "question": "Why does the Skipper stop abruptly after he says \"when you're running a blockade\"?",
+   "gold_gutenberg_id": 62139,
+   "routing_eligible": true,
+   "routed_gids": [
+    62139
+   ],
+   "route_at1": true,
+   "route_at5": true,
+   "recall": true,
+   "answer": "Because he realizes he's sharing news that he he hadn't meant to disclose so soon. ",
+   "choice": 3,
+   "f1": null,
+   "rouge_l": null,
+   "meteor": null,
+   "correct": true,
+   "latency_ms": 2.2788999991025776,
+   "tokens_in": 100,
+   "tokens_out": 10,
+   "cost_usd_equiv": 0.001,
+   "evidence_ids": [
+    "E1"
+   ],
+   "label": null
+  },
+  {
+   "qid": "quality-62139_J05FWZR6_3",
+   "question": "Who or what is Leo?",
+   "gold_gutenberg_id": 62139,
+   "routing_eligible": true,
+   "routed_gids": [
+    62139
+   ],
+   "route_at1": true,
+   "route_at5": true,
+   "recall": true,
+   "answer": "The name of the crew's ship",
+   "choice": 1,
+   "f1": null,
+   "rouge_l": null,
+   "meteor": null,
+   "correct": true,
+   "latency_ms": 5.100999997812323,
+   "tokens_in": 100,
+   "tokens_out": 10,
+   "cost_usd_equiv": 0.001,
+   "evidence_ids": [
+    "E1"
+   ],
+   "label": null
+  }
+ ]
+}
